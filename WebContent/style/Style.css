@@ -1,0 +1,183 @@
+@charset "ISO-8859-1";
+/*--------------------------------------------------------------
+# Color variables
+--------------------------------------------------------------*/
+:root {
+  --color_background: #232531; /* Background */
+  --color_muted:      #98a5c3; /* Muted */
+  --color_text:       #f7f7f7; /* Text */
+  --color_heading:    #ffffff; /* Headings */
+  --color_action:     #68ecf3; /* Links and buttons */
+  --color_error: 	  #f69491;
+  --color_highlight:  #363948; /* Browser selection highlight and pre/code backgrounds */
+}
+
+/*--------------------------------------------------------------
+# Size variables
+--------------------------------------------------------------*/
+:root {
+	--page_content_width: 900px;
+	--page_content_small: calc(var(--page_content_width) * 0.75);
+	--font_family_title: "Consolas", "Noto Mono", "Oxygen Mono", Courier, monospace;
+	--font_family_code: "Roboto Mono", Monospace;
+}
+
+/*--------------------------------------------------------------
+# Style
+--------------------------------------------------------------*/
+body {
+	text-align: center;
+	background-color: var(--color_background);
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2em;
+}
+
+html {
+	font-family: "Roboto Mono", monospace;
+}
+
+a {
+  color: var(--color_action);
+}
+
+a:hover {
+  background-color: var(--color_action);
+  color: var(--color_background) !important;
+  text-decoration: none;
+}
+
+.form-container {
+	text-align: center;
+}
+
+.table {
+	display: inline-block;
+	text-align: center;
+	border-spacing: 15px;
+	margin: 0 auto;
+}
+
+.row {
+	margin: 0 auto;
+	display: table-row;
+	
+}
+
+.row > * {
+	display: block;
+	width: 300px;
+}
+
+#button-row {
+	display: block;
+	width: 300px;
+}
+
+#intro-row > * {
+	width: 500px;
+}
+
+.userInfo {
+	display: block;
+}
+
+.error {
+	display: block;
+	color: var(--color_error);
+	font-size: 0.8em;
+	text-align: left;
+	max-width: 300px;
+}
+
+.profile_details {
+	display: block;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+#button {
+	width: auto;
+	margin: 0 auto;
+}
+
+.profile-image {
+	display: block;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3em;
+}
+
+label {
+	display: block;
+	text-align: left;
+	font-size: 1.2em;
+}
+
+textarea {
+	height: 200px;
+}
+
+body,
+input,
+textarea {
+  color: var(--color_text);
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color_heading);
+  text-transform: uppercase;
+  font-family: var(--font_family_title);
+}
+
+h2, h3, h4, h5, h6 {
+	padding-top: 1em;
+}
+
+h1 {
+	font-size: 2.44em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.7em;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: var(--color_action);
+  border: none;
+  color: var(--color_background);
+  font-family: var(--font_family_code);
+  font-size: 1.2em;
+  line-height: 1.8;
+  padding: 5px 1em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  top: -1px;
+}
+
+input,
+textarea {
+  background-color: var(--color_highlight);
+  border: 1px dashed var(--color_muted);
+  color: var(--color_heading);
+  padding: 0 0.3em;
+}
