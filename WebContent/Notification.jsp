@@ -10,12 +10,14 @@
 </head>
 <body>
 	<div align="center">
-		<h2>User Created Successfully!</h2>
+		<h2>User Registration Confirmation</h2>
 	</div>
-	<br></br>
-	   <form name="form" method="post">
-        <input style="font-size: 1rem; font-weight: bold; width: 25%; height: 50px;"
-         type='button' value='Go Back to Login' onclick="window.location='index.jsp'"/>
-      </form>
+		   
+	<section><br>
+		<div align="center">User has been created successfully!<br><br>
+		Click <a href="index.jsp">here</a> to continue to login page, OR<br>
+		Click <a href="Register.jsp">here</a> to continue to registration page!
+		</div>
+	</section>
 </body>
 </html>

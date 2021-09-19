@@ -25,6 +25,8 @@ function validate()
      return false; 
      } 
  } 
+ 
+
 </script> 
 
 </head>
@@ -49,11 +51,27 @@ function validate()
          </tr>
         </table>
         <br>
-        <input type="submit" value="Sign In"></input>
-        <!-- reset the page -->
-        <input type="button" onclick="window.location='index.jsp'" value="Reset"></input>
-        <!-- reset the form -->
+        
+        <!-- 
+        	customized button for Submit and Reset (see Style.css) 
+        	Previous button style was commented.
+        	
+        	Reset button has 2 options noted for reference: 
+        	Option 1 - resets the page
+        	Option 2 - resets the form (commented)
+        -->
+        
+        
+        <!-- <input type="submit" value="Sign In"></input> -->
+        <button type="submit">Sign In</button>
+        
+        <!-- Option 1  -->
+        <!-- <input type="button" onclick="window.location='index.jsp'" value="Reset"> -->
+        <button type="button" onclick="window.location='index.jsp'">Reset</button>
+        
+        <!-- Option 2  -->
         <!--  <input type="reset" value="Reset"></input>-->
+        
     </form>
 <section><br>
 	<div align="center">New user? Click	<a href="Register.jsp">here</a> to register.

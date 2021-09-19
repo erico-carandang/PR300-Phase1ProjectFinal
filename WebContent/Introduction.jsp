@@ -7,28 +7,35 @@
     <%@include file="style/Style.css" %>
     </style>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>User Introduction</title>
 
 <script> 
-var clickedButton;
+var clickedButton = null;
 
 function validate()
 { 
     var userId = document.form.userId.value;
-    var aboutMe = document.form.aboutMe.value; 
-    var hobby = document.form.hobby.value;
 
-	if(clickedButton == "Save") {
-	    if (aboutMe==null || aboutMe=="")
+	if(clickedButton == "Save") 
+	{
+	    var aboutMe = document.form.aboutMe.value; 
+	    var hobby = document.form.hobby.value;
+		if (aboutMe==null || aboutMe=="")
 	    { 
-	    alert("Field can't be blank"); 
+	    alert("About me cannot be blank"); 
 	    return false; 
 	    }
+		
 	    else if (hobby==null || hobby=="")
 	    { 
-	    alert("Field can't be blank"); 
+	    alert("Hobby cannot be blank"); 
 	    return false; 
 	    }
+	}
+	else
+	{
+		document.form.hobby.value = null;
+		document.form.aboutMe.value = null;
 	}
     form.submit("IntroductionServerlet")
 }
@@ -57,11 +64,11 @@ function validate()
          </tr>
         </table>
         <br>
-         <input style="font-size: 1rem; font-weight: bold; width: 25%; height: 50px;"
-          type="submit" onclick="clickedButton='Save'" value="Save"></input>
-          
-         <input  style="font-size: 1rem; font-weight: bold; width: 25%; height: 50px;"
-          type="submit" onclick="clickedButton='Maybe later'" value="Maybe later"></input>
+        
+        
+        <button type="submit" onclick="clickedButton='Save'">Save</button>
+        <button type="submit" onclick="clickedButton='AskMeLater'">Ask Me Later</button>
+        
     </form>
 </body>
 </html>

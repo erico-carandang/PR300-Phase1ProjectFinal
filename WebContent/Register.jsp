@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>User Registration</title>
+<title>New User Registration</title>
 
 <style type="text/css">
     <%@include file="style/Style.css" %>
@@ -13,8 +13,8 @@
 <script> 
 function validate()
 { 
-     var firstname = document.form.fullname.value;
-     var lastname = document.form.fullname.value;
+     var firstname = document.form.firstname.value;
+     var lastname = document.form.lastname.value;
      var email = document.form.email.value;
      var username = document.form.username.value; 
      var password = document.form.password.value;
@@ -54,31 +54,31 @@ function validate()
 </script> 
 </head>
 <body>
-<h2>Enter Details </h2>
+<h2>New User Registration Form</h2>
     <form name="form" action="RegisterServlet" method="post" onsubmit="return validate()">
         <table align="center">
          <tr>
-         <td style="padding-right: 1rem;">First Name:</td>
+         <td style="padding-right: 1rem; text-align: right;">First Name:</td>
          <td><input type="text" name="firstname" /></td>
          </tr>
          <tr>
-         <td style="padding-right: 1rem;">Last Name:</td>
+         <td style="padding-right: 1rem; text-align: right;">Last Name:</td>
          <td><input type="text" name="lastname" /></td>
          </tr>
          <tr>
-         <td style="padding-right: 1rem;">Email:</td>
+         <td style="padding-right: 1rem; text-align: right;">Email:</td>
          <td><input type="email" placeholder="email@example.com" name="email" /></td>
          </tr>
          <tr>
-         <td style="padding-right: 1rem;">Username:</td>
+         <td style="padding-right: 1rem; text-align: right;">Username:</td>
          <td><input type="text" name="username" /></td>
          </tr>
          <tr>
-         <td style="padding-right: 1rem;">Password:</td>
+         <td style="padding-right: 1rem; text-align: right;">Password:</td>
          <td><input type="password" name="password" /></td>
          </tr>
          <tr>
-         <td style="padding-right: 1rem;">Confirm Password:</td>
+         <td style="padding-right: 1rem; text-align: right;">Confirm Password:</td>
          <td><input type="password" name="conpassword" /></td>
          </tr>
          <tr>
@@ -94,7 +94,7 @@ function validate()
         <br>
         <br>
         <div align="center">Already registered? Click 
-		<a href="index.jsp">here</a> to login
+		<a href="index.jsp">here</a> to login.
 	</div>
         
     </form>
